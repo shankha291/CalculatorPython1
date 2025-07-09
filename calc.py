@@ -8,7 +8,7 @@ window.geometry("500x500")
 
 
 frame=Frame(window)
-for i in range(6):  # You have 6 rows: entry + 5 button rows
+for i in range(6):  
     frame.grid_rowconfigure(i, weight=1)
 for j in range(4):
     frame.grid_columnconfigure(j, weight=1)
@@ -39,7 +39,7 @@ def total():
         entry.delete(0, END)
         entry.insert(END, result)
         is_result = True
-        entry.xview_moveto(1)  # Scrolls to the far right
+        entry.xview_moveto(1)  
 
     except ZeroDivisionError:
         entry.delete(0,END)
